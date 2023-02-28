@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root">
+<div></div>
+<div></div>
+<div></div>
+
+  </div>
+  <script>
+    const root = document.getElementById("root");
+    let list = ["div", "div"];
+    // 원시값 참조값
+    // const 재할당 x 하지만 같은 내용뭉이면 바뀔수 있다.
+    //객체는 참조 타입
+    for (let i = 0; i < list.length; i++) {
+      let One = document.createElement(list[i]);
+      root.appendChild(One);
+    }
+
+    let obj = {
+      a: document.createElement("div")
+    }
+    Two.obj.a
+  </script>
+</body>
+
+</html>

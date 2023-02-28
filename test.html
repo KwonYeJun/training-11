@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<div id="root"></div>
+
+
+<script>
+  let root = document.getElementById("root");
+  let areaout = ["header","main","footer"];
+
+  //헤더 메인 푸터 반복문을 사용 하여 만들기
+function createbox(){
+  for(let i = 0; i < areaout.length ; i++){
+    const element = document.createElement(areaout[i]);
+    root.appendChild(element);
+  };
+}
+createbox(); //큰틀 영역 만드는거 함수 호출
+
+
+
+</script>
+
+
+</body>
+</html>

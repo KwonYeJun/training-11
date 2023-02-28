@@ -73,6 +73,8 @@
     const Threech1 = document.createElement("div");
     Two.appendChild(Twoch1);
     Three.appendChild(Threech1);
+    let divList = ["div"]
+
 
     function divroot() {
       root.style.width = "100vw";
@@ -101,7 +103,7 @@
     function divThree() {
       Three.style.width = "100%";
       Three.style.height = "35%";
-  
+
       Three.style.display = "flex";
       Three.style.flexDirection = " column";
       Three.style.justifyContent = "center";
@@ -132,7 +134,7 @@
     function divTwoch1() {
       Twoch1.style.width = "40%";
       Twoch1.style.height = "70%";
-   
+
       Twoch1.style.color = trainingData.color[1];
       Twoch1.style.display = "flex";
       Twoch1.style.flexDirection = " column";
@@ -145,7 +147,7 @@
     function divThreech1() {
       Threech1.style.width = "30%";
       Threech1.style.height = "40%";
-    
+
       Threech1.style.backgroundColor = trainingData.color[1];
       Threech1.style.borderRadius = "50%";
 
@@ -182,8 +184,8 @@
         root.style.backgroundColor = trainingData.color[counter];
         Threech1.style.backgroundColor = trainingData.color[button];
         Onech2.style.backgroundColor = trainingData.color[button];
-      Onech1.style.color = trainingData.color[button];
-      Twoch1.style.color = trainingData.color[button];
+        Onech1.style.color = trainingData.color[button];
+        Twoch1.style.color = trainingData.color[button];
       }
 
       console.log(counter);
