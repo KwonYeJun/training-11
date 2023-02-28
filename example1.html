@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+ #root{
+  justify-content: ;
+ }
+
+</style>
+<body>
+
+  <div id="root">
+
+
+  </div>
+
+  <script>
+
+
+
+    // const styleObj = {
+
+    //   root: document.getElementById("root"),
+    //   One: document.createElement("div"),
+    //   Two: document.createElement("div"),
+    //   Three: document.createElement("div"),
+
+
+
+    //   , divOne: function () {
+
+
+    //   }
+    //   , divTwo: function () {
+
+    //   }
+
+    //   , divThree: function () {
+
+    //   }
+    //   , divFour: function () {
+
+    //   }
+    // }
+
+    const trainingData = {
+      title: "Lorem Ipsum",
+      paragraph: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia nesciunt quam commodi aspernatur molestias similique nisi. Et, natus! Et quae non in consequuntur nulla expedita aut necessitatibus. Quaerat, mollitia illum?",
+      color: ["#1E1E1E", "#FFFFFF"],
+
+    }
+
+    const root = document.getElementById("root");
+
+    const One = document.createElement("div");
+    const Two = document.createElement("div");
+    const Three = document.createElement("div");
+    root.appendChild(One);
+    root.appendChild(Two);
+    root.appendChild(Three);
+
+
+
+
+
+    const Onech1 = document.createElement("div");
+    const Onech2 = document.createElement("div");
+    One.appendChild(Onech1);
+    One.appendChild(Onech2);
+    const Twoch1 = document.createElement("div");
+    const Threech1 = document.createElement("div");
+    Two.appendChild(Twoch1);
+    Three.appendChild(Threech1);
+
+    function divroot() {
+      root.style.width = "100vw";
+      root.style.height = "100vh";
+      root.style.border = "1px solid black";
+      root.style.backgroundColor = "#5A5A5A";
+    }
+    function divOne() {
+      One.style.width = "100%";
+      One.style.height = "35%";
+      One.style.border = "1px solid black";
+      One.style.backgroundColor = "#5A5A5A";
+      One.style.display = "flex";
+      One.style.flexDirection = " column";
+      One.style.justifyContent = "end";
+      One.style.alignItems = "center";
+    }
+    function divTwo() {
+      Two.style.width = "100%";
+      Two.style.height = "30%";
+      Two.style.border = "1px solid black";
+      Two.style.backgroundColor = "#5A5A5A";
+      Two.style.display = "flex";
+      Two.style.flexDirection = " column";
+      Two.style.justifyContent =  "center";
+      Two.style.alignItems = "center";
+    }
+    function divThree() {
+      Three.style.width = "100%";
+      Three.style.height = "35%";
+      Three.style.border = "1px solid black";
+      Three.style.backgroundColor = "#5A5A5A";
+      Three.style.display = "flex";
+      Three.style.flexDirection = " column";
+      Three.style.justifyContent = "center";
+      Three.style.alignItems = "center";
+    }
+
+    function divOnech1() {
+      Onech1.style.width = "70%";
+      Onech1.style.height = "35%";
+      Onech1.style.border = "1px solid black";
+      Onech1.style.backgroundColor = "red";
+      Onech1.style.margin = "10%";
+      
+    }
+
+    function divOnech2()  {
+      Onech2.style.width = "70%";
+      Onech2.style.height = "1%";
+      Onech2.style.border = "1px solid black";
+      Onech2.style.backgroundColor = "blue";
+    }
+    function divTwoch1()  {
+      Twoch1.style.width = "70%";
+      Twoch1.style.height = "70%";
+      Twoch1.style.border = "1px solid black";
+      Twoch1.style.backgroundColor = "blue";
+    }
+
+    function divThreech1()  {
+      Threech1.style.width = "30%";
+      Threech1.style.height = "40%";
+      Threech1.style.border = "1px solid black";
+      Threech1.style.backgroundColor = "blue";
+      Threech1.style.borderRadius = "50%";
+
+    }
+
+
+
+
+    divroot();
+    divOne();
+    divTwo();
+    divThree();
+    divOnech1();
+    divOnech2();
+    divTwoch1();
+    divThreech1();
+
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
