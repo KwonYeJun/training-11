@@ -51,14 +51,34 @@
 
     console.dir(root.children[1].children[0])
 
-    //높이 넓이 스타일지정
-    function styleWH (parentTagNum, styleWidth, styleHeight) {
-      const rootChildStyle = root.children[parentTagNum].style
-      rootChildStyle.width = styleWidth
-      rootChildStyle.height = styleHeight
+    //높이 넓이 백그라운드컬러 스타일지정
+    function styleParentFive (parentTagNum, styleWidth, styleHeight, styleBackColor, styleBorder, styleFontColor) {
+      const rootParentStyle = root.children[parentTagNum].style
+        rootParentStyle.width = styleWidth
+        rootParentStyle.height = styleHeight
+        rootParentStyle.backgroundColor = styleBackColor
+        rootParentStyle.border = styleBorder
+        rootParentStyle.fontColor = styleFontColor
+    }
+    function styleChildFive (parentTagNum, childTagNum, styleWidth, styleHeight, styleBackColor, styleBorder, styleFontColor) {
+      const rootChildStyle = root.children[parentTagNum].children[childTagNum].style
+        rootChildStyle.width = styleWidth
+        rootChildStyle.height = styleHeight
+        rootChildStyle.backgroundColor = styleBackColor
+        rootChildStyle.border = styleBorder
+        rootChildStyle.fontColor = styleFontColor
     }
 
-    
+    styleParentFive(0,"100vw","30vh","gray")
+    styleParentFive(1,"100vw","40vh","green")
+    styleParentFive(2,"100vw","30vh","blue")
+    styleChildFive(1,0,"100px","100px","red")
+    styleChildFive(1,1,"100px","100px","red")
+    styleChildFive(1,2,"100px","100px","red")
+    styleChildFive(2,0,"100px","100px","red")
+
+    let a = root.children[2].children[0].style
+    a.borderRadius = "50%";
 
 /*     const grandChildrenStyle = {
       parentNum : "",
