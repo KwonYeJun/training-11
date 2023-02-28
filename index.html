@@ -7,6 +7,72 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="root">
+  </div>
+  <script>
+    //root 선언
+    const root = document.getElementById('root')
+
+    //최상위 부모 3분할
+    const parentDiv = ["header","main","footer"]
+    for(let i = 0; i < parentDiv.length;i++){
+      const elementDiv = document.createElement(parentDiv[i]);
+      root.appendChild(elementDiv);
+    }
+
+    //원하는 태그를 원하는 부모의 아이로 원하는 갯수만큼 만들기
+    //parentTagNum는 최상위 부모에서 원하는 태그를 숫자로 넣을것
+    function createTag (parentTagNum, tagName,tagNumbers) {
+      for(let i = 0; i < tagNumbers; i++){
+        const createElementTag = document.createElement(tagName);
+        const rootChild = root.children[parentTagNum]
+        rootChild.appendChild(createElementTag)
+      }
+    }
+
+    //main의 div 3개
+    createTag(1, "div",3);
+    //footer의 div 1개
+    createTag(2,"div",1)
+
+    //display를 정하고 정렬을 정하는 기능
+    function styleDisplayJA (parentTagNum, styleDisplay, styleJustify, styleAlign) {
+      const rootChildStyle = root.children[parentTagNum].style
+      rootChildStyle.display = styleDisplay;
+      rootChildStyle.justifyContent = styleJustify;
+      rootChildStyle.alignItems = styleAlign;
+    }
+
+    //main을 가운데 정렬함
+    styleDisplayJA(1,"flex","center","center")
+    //footer을 가운데 정렬함
+    styleDisplayJA(2,"flex","center","center")
+    
+
+    console.dir(root.children[1].children[0])
+
+    //높이 넓이 스타일지정
+    function styleWH (parentTagNum, styleWidth, styleHeight) {
+      const rootChildStyle = root.children[parentTagNum].style
+      rootChildStyle.width = styleWidth
+      rootChildStyle.height = styleHeight
+    }
+
+    
+
+/*     const grandChildrenStyle = {
+      parentNum : "",
+      childNum : "",
+
+      childrenPick : function () {
+        root.children[this.first].children[this.second];
+      },
+
+
+    } */
+
+
+
+  </script>
 </body>
 </html>
